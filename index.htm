@@ -1,146 +1,104 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Password Protected</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow">
-
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                background: #f2f2f2;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
-
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-                min-width: 500px;
-
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
-
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #228843;
-            }
-            .protected__content__btn {
-                background-color: #228843;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
-
-            }
-            .protected__content__btn:hover {
-                background-color: #1C6D36;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">You entered the wrong password</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">You need a password to continue</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="./assets/ico/favicon.ico">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Welcome: LHC Environmental Requests</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/cover.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! --><!--[if lt IE 9]><script src="./assets/js/ie8-responsive-file-warning.js"></script><![endif]--><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <style>
+/* http://css-tricks.com/perfect-full-page-background-image/ */
+/* image should be 1291wd x 726ht */
+html {
+background: url(./assets/img/background_image.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+body {
+padding-top: 20px;
+font-size: 16px;
+font-family: "Open Sans",serif;
+background: transparent;
+}
+h1 {
+font-family: "Abel", Arial, sans-serif;
+font-weight: 400;
+font-size: 40px;
+}
+/* Override B3 .panel adding a subtly transparent background */
+.panel {
+background-color: rgba(255, 255, 255, 0.9);
+}
+.margin-base-vertical {
+margin: 40px 0;
+}
+</style> </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">LHC Environmental Service
+                Requests</h3>
+              <ul class="nav masthead-nav">
+                <li><a href="dashboard.htm"><span>Dashboard</span></a></li>
+                <li><a href="request_form.htm"><span>New Request Form</span></a></li>
+				<li><a href="comments.htm"><span>Comments</span></a></li>
+				<li><a href="call-log.htm">Call Log</a></li>
+                <li><a href="resources.htm">Resources</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="inner cover">
+            <h1 class="cover-heading">Welcome</h1>
+            <p style="color: white;" class="lead">...to this restricted-access
+              project management portal to track environmental service requests
+              by the Louisiana Housing Corporation in response to the Louisiana
+              floods of 2016.<br>
+              Contact <a href="mailto:webmaster@franklinassoc.com">Franklin
+                Associates</a> with questions.</p>
+            <p class="lead"> <a href="request_form.htm" class="btn btn-lg btn-default">New&nbsp;Request</a>
+            </p>
+          </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Snapshot of Louisiana flooding by <a href="https://www.flickr.com/photos/chiefngb/">Chief
+                  National Guard Bureau</a>.</p>
+            </div>
+          </div>
         </div>
-
-        <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
-
-            function login(secret) {
-                var hash = Sha1.hash(secret)
-                var url = hash + "/index.htm"
-                var alert = document.querySelectorAll('[data-id="alert"]')
-
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
-
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
-                    password[0].value = ''
-                }
-                request.send()
-            }
-
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
-
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
-    </body>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript================================================== --><!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
 </html>
